@@ -1,0 +1,95 @@
+﻿#include <iostream>
+#include <vector>
+
+using namespace std;
+
+// --- 1. BUBBLE SORT ---
+void bubbleSort(vector<int>& lista) {
+    int n = lista.size();
+    for (int i = 0; i <= n - 2; i++) {
+        bool intercambiado = false;
+        for (int j = 0; j <= n - 2 - i; j++) {
+            if (lista[j] > lista[j + 1]) {
+                int temp = lista[j];
+                lista[j] = lista[j + 1];
+                lista[j + 1] = temp;
+                intercambiado = true;
+            }
+        }
+        if (!intercambiado) break;
+    }
+}
+
+// --- 2. SELECTION SORT ---
+void selectionSort(vector<int>& lista) {
+    int n = lista.size();
+    for (int i = 0; i <= n - 2; i++) {
+        int min_idx = i;
+        for (int j = i + 1; j <= n - 1; j++) {
+            if (lista[j] < lista[min_idx]) {
+                min_idx = j;
+            }
+        }
+        if (min_idx != i) {
+            int temp = lista[i];
+            lista[i] = lista[min_idx];
+            lista[min_idx] = temp;
+        }
+    }
+}
+
+// --- 3. MERGE SORT ---
+vector<int> mezclar(vector<int> izq, vector<int> der) {
+    vector<int> resultado;
+    int i = 0, j = 0;
+    while (i < izq.size() && j < der.size()) {
+        if (izq[i] <= der[j]) {
+            resultado.push_back(izq[i]);
+            i++;
+        }
+        else {
+            resultado.push_back(der[j]);
+            j++;
+        }
+    }
+    while (i < izq.size()) { resultado.push_back(izq[i]); i++; }
+    while (j < der.size()) { resultado.push_back(der[j]); j++; }
+    return resultado;
+}
+
+vector<int> mergeSort(vector<int> lista) {
+    if (lista.size() <= 1) return lista;
+    int medio = lista.size() / 2;
+    vector<int> izq(lista.begin(), lista.begin() + medio);
+    vector<int> der(lista.begin() + medio, lista.end());
+    return mezclar(mergeSort(izq), mergeSort(der));
+}
+
+// --- FUNCIÓN PRINCIPAL ---
+int main() {
+    // Optimización de velocidad para Autograders
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n;
+    // El Autograder suele enviar N (cantidad) y luego los números
+    if (!(cin >> n)) return 0;
+
+    vector<int> lista(n);
+    for (int i = 0; i < n; i++) {
+        cin >> lista[i];
+    }
+
+    // DESCOMENTA SOLO EL QUE QUIERAS PROBAR:
+    // bubbleSort(lista);
+    // selectionSort(lista);
+    lista = mergeSort(lista); // MergeSort retorna un nuevo vector según tu pseudocódigo
+
+    // Imprimir resultado con formato exacto para el Autograder
+    for (int i = 0; i < n; i++) {
+        cout << lista[i] << (i == n - 1 ? "" : " ");
+    }
+    cout << endl;
+
+    return 0;
+}

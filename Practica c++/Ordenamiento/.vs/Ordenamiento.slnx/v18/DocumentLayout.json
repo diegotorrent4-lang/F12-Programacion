@@ -1,0 +1,38 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Programaci\u00F3n\\F12-Programacion\\Practica c\u002B\u002B\\Ordenamiento\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7DBFF82E-9603-405F-BBE3-18B39FAFBBB1}|Ordenamiento.vcxproj|D:\\Programaci\u00F3n\\F12-Programacion\\Practica c\u002B\u002B\\Ordenamiento\\ordenamiento.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7DBFF82E-9603-405F-BBE3-18B39FAFBBB1}|Ordenamiento.vcxproj|solutionrelative:ordenamiento.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ordenamiento.cpp",
+              "DocumentMoniker": "D:\\Programaci\u00F3n\\F12-Programacion\\Practica c\u002B\u002B\\Ordenamiento\\ordenamiento.cpp",
+              "RelativeDocumentMoniker": "ordenamiento.cpp",
+              "ToolTip": "D:\\Programaci\u00F3n\\F12-Programacion\\Practica c\u002B\u002B\\Ordenamiento\\ordenamiento.cpp",
+              "RelativeToolTip": "ordenamiento.cpp",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-10T02:38:16.617Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
