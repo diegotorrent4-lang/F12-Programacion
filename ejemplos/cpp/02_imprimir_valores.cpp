@@ -1,5 +1,5 @@
 // 02_imprimir_valores.cpp
-// Declara variables de distintos tipos y las imprime en pantalla.
+// Declara v1riables de distintos tipos y las imprime en pantalla.
 //
 // Compilar: g++ -o imprimir_valores 02_imprimir_valores.cpp
 // Ejecutar: ./imprimir_valores
